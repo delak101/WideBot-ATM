@@ -8,9 +8,11 @@ Simple ATM API For Deposit and Withdrawal
 
 <!--<li>(windows) install VScode & <a href="https://dotnet.microsoft.com/en-us/apps/aspnet">ASP.Net</a>-->
 <li> move to api Folder
+
+```
 cd WideBot/api
 dotnet watch --no-hot-reload
-
+```
 Postman cURLs
 
 register:
