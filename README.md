@@ -13,7 +13,8 @@ Simple ATM API For Deposit and Withdrawal
 cd WideBot/api
 dotnet watch --no-hot-reload
 ```
-Postman cURLs
+<hr>
+<h2>Postman cURLs</h2>
 
 register:
 ```
