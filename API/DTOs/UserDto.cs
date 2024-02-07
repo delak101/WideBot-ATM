@@ -2,6 +2,6 @@
 
 public class UserDto
 {
-    public int CardNum { get; set; }
+    public long CardNum { get; set; }
     public string Token { get; set; }
 }

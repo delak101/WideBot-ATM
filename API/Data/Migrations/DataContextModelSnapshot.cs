@@ -22,7 +22,10 @@ namespace API.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("CardNum")
+                    b.Property<decimal>("Balance")
+                        .HasColumnType("TEXT");
+
+                    b.Property<long>("CardNum")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("PIN")

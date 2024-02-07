@@ -16,8 +16,9 @@ namespace API.Data.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    CardNum = table.Column<int>(type: "INTEGER", nullable: false),
+                    CardNum = table.Column<long>(type: "INTEGER", nullable: false),
                     PIN = table.Column<int>(type: "INTEGER", nullable: false),
+                    Balance = table.Column<decimal>(type: "TEXT", nullable: false),
                     PinHash = table.Column<byte[]>(type: "BLOB", nullable: true),
                     PinSalt = table.Column<byte[]>(type: "BLOB", nullable: true)
                 },

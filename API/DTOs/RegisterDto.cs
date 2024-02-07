@@ -5,7 +5,7 @@ namespace API.DTOs;
 public class RegisterDto
 {
     [Required]
-    public int CardNum { get; set; }
+    public long CardNum { get; set; }
     [Required]
     public int PIN { get; set; }
 }

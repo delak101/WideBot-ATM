@@ -1,13 +1,10 @@
 using System.Security.Cryptography;
-using System.Text;
 using API.Data;
 using API.DTOs;
 using API.Entities;
 using API.Interfaces;
-using API.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using SQLitePCL;
 
 namespace API.Controllers;
 
@@ -84,7 +81,7 @@ public class AccountController : BaseApiController
         };
     }
 
-    private async Task<bool> CardExist(int CardNum)
+    private async Task<bool> CardExist(long CardNum)
     {
         return await _context.Users.AnyAsync(x => x.CardNum == CardNum);
     }
