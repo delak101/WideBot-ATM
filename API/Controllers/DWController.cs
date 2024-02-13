@@ -15,7 +15,7 @@ public class DWController : BaseApiController
     }
 
     [HttpGet("Balance/{cardnum}")] // Get: api/dw/balance/{cardnum}
-    public async Task<ActionResult<decimal>> GetBalance(int cardNum)
+    public async Task<ActionResult<decimal>> GetBalance(long cardNum)
     {
         var user = await GetUserByCardNum(cardNum);
 
@@ -69,14 +69,12 @@ public class DWController : BaseApiController
     }
     public class DWRequest
     {
-        public int CardNum { get; set; }
+        public long CardNum { get; set; }
         public decimal Amount { get; set; }
     }
 
-    private async Task<User> GetUserByCardNum(int cardNum)
+    private async Task<User> GetUserByCardNum(long cardNum)
     {
             return await _context.Users.FirstOrDefaultAsync(u => u.CardNum == cardNum);
     }
-
-
 }
